@@ -9,7 +9,7 @@ public:
     int right = nums.size() - 1; // 初始搜索范围[left, right]
 
     while (left <= right) {
-      int middle = (left + right) / 2;
+      int middle = left + ((right - left) / 2); // 防止left + right时溢出
       if (nums[middle] < target) {
         // middle左侧的元素都小于target
         // 调整搜索范围[middle + 1, right]
