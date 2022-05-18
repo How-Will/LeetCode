@@ -27,15 +27,3 @@ public:
     return -1; // 数组中不存在target
   }
 };
-
-int main() {
-  vector<int> ivec{-1, 0, 3, 5, 9, 12};
-  int target = 9;
-  Solution *sol = new Solution();
-
-  int res = sol->search(ivec, target);
-
-  cout << "res = " << res << endl;
-
-  return 0;
-}
