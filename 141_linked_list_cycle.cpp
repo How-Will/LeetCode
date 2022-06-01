@@ -48,3 +48,22 @@ public:
     return true; // 有环
   }
 };
+
+class Solution3 {
+public:
+  // 龟兔赛跑算法
+  bool hasCycle(ListNode *head) {
+    ListNode *rabbit = head;
+    ListNode *turtle = head;
+
+    // 判断条件决定了使用do-while循环
+    do {
+      if (!rabbit || !rabbit->next) // 无环
+        return false;
+      rabbit = rabbit->next->next;
+      turtle = turtle->next;
+    } while (rabbit != turtle);
+
+    return true;
+  }
+};
